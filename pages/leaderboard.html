@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard</title>
+    <link rel="stylesheet" href="leaderboard.css">
+</head>
+<body>
+    <div class="leaderboard-container">
+        <div class="top-rankings">
+            <div class="rank-card second" id="second">
+                <img src="./assets/avatar2.png" alt="Shane Abellana">
+                <h3>Shane Abellana</h3>
+                <p>Score: 1310</p>
+                <p>Rank #2</p>
+            </div>
+            <div class="rank-card first" id="first">
+                <img src="./assets/avatar1.png" alt="Gino Deedrick">
+                <h3>Gino Deedrick</h3>
+                <p>Score: 1355</p>
+                <p>Rank #1</p>
+            </div>
+            <div class="rank-card third" id="third">
+                <img src="./assets/avatar3.png" alt="Robert Paweick">
+                <h3>Robert Paweick</h3>
+                <p>Score: 1260</p>
+                <p>Rank #3</p>
+            </div>
+        </div>
+        <table class="leaderboard-table">
+            <thead>
+                <tr>
+                    <th>Icon</th>
+                    <th>Rank</th>
+                    <th>Name</th>
+                    <th>Username</th>
+                    <th>Total Time</th>
+                    <th>Challenges</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody id="leaderboard-body">
+                <tr>
+                    <td><img src="./assets/avatar1.png" alt="Gino Deedrick"></td>
+                    <td>4</td>
+                    <td>Xiomara Domka</td>
+                    <td>@xiomara</td>
+                    <td>16h 18m 53s</td>
+                    <td>26</td>
+                    <td>1230</td>
+                </tr>
+                <tr>
+                    <td><img src="./assets/avatar1.png" alt="Gino Deedrick"></td>
+                    <td>5</td>
+                    <td>Caroline Tillo</td>
+                    <td>@caroline</td>
+                    <td>19h 21m 5s</td>
+                    <td>32</td>
+                    <td>1190</td>
+                </tr>
+                <tr>
+                    <td><img src="./assets/avatar1.png" alt="Gino Deedrick"></td>
+                    <td>6</td>
+                    <td>Myron Battistini</td>
+                    <td>@chanel</td>
+                    <td>12h 30m 39s</td>
+                    <td>24</td>
+                    <td>1095</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const rows = document.querySelectorAll(".leaderboard-table tbody tr");
+            rows.forEach(row => {
+                row.addEventListener("mouseover", () => {
+                    row.style.backgroundColor = "rgba(255, 255, 255, 0.3)";
+                });
+                row.addEventListener("mouseout", () => {
+                    row.style.backgroundColor = "";
+                });
+            });
+        });
+    </script>
+</body>
+</html>
