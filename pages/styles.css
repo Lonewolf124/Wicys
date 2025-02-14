@@ -1,0 +1,76 @@
+.text-outline {
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.7),
+    0 0 10px rgba(255, 255, 255, 0.7);
+}
+body {
+  background-color: #1d1238;
+  color: white;
+}
+h1.logoHeading {
+  -webkit-text-stroke: 0.5px #000;
+}
+
+span.textOutline {
+  -webkit-text-stroke: 1px #fff;
+  color: transparent;
+}
+
+.galleryBox img {
+  margin-bottom: 12px;
+}
+
+.footerlink li {
+  cursor: pointer;
+  width: fit-content;
+}
+
+.footerlink li:after {
+  content: "";
+  width: 0%;
+  position: relative;
+  height: 1px;
+  background-color: #fff;
+  display: block;
+  transition: 0.3s ease-in-out;
+}
+
+.footerlink li:hover:after {
+  width: 100%;
+}
+
+.main {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0f172a;
+}
+.slider-container {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+.slider {
+    display: flex;
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    gap: 2rem;
+    position: absolute;
+    white-space: nowrap;
+}
+
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.slider {
+    display: flex;
+    gap: 2rem;
+}

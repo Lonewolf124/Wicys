@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+    <title>WICYS Home Page</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- header  -->
+    <header
+      class="fixed w-[88vw] top-10 mx-auto py-5 flex flex-col gap-5 md:flex-row justify-around items-center z-50 bg-transparent"
+    >
+      <div class="flex relative">
+        <h1
+          class="text-3xl font-bold mix-blend-difference drop-shadow-xl text-white"
+        >
+          WICYS
+        </h1>
+      </div>
+      <div
+        class="flex px-8 py-4 justify-around bg-white bg-opacity-60 backdrop-blur-lg rounded-full text-slate-900 font-semibold text-sm w-full max-w-3xl"
+      >
+        <ul class="flex flex-wrap gap-6 justify-around w-full">
+          <li><a href="#hero" class="scroll-link">Home</a></li>
+          <li><a href="#about" class="scroll-link">About</a></li>
+          <li><a href="#ticket" class="scroll-link">Register</a></li>
+          <li><a href="#gallery" class="scroll-link">Gallery</a></li>
+          <li><a href="leaderboard.html">LeaderBoard</a></li>
+          <li><a href="#contact" class="scroll-link">Contact</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- hero section  -->
+    <section
+      id="hero"
+      class="relative px-12 md:px-24 w-full h-screen flex flex-col py-6 justify-center bg-[url('/public/herobg02.jpeg')] bg-no-repeat bg-cover bg-fixed bg-bottom"
+    >
+      <div
+        class="absolute inset-0 bg-gradient-to-b from-black/70 to-black/30"
+      ></div>
+      <p class="relative text-white z-10">
+        Feb 20-22, 2025 | Wicys, Vit Bhopal
+      </p>
+      <h1 class="text-5xl md:text-8xl font-bold mt-14 relative z-10 text-white">
+        EVENT NAME <br />
+        <span
+          class="text-outline bg-clip-text text-transparent backdrop-blur-lg bg-white bg-opacity-20"
+          >Advitya 2025</span
+        >
+      </h1>
+      <button
+        class="mt-6 px-6 py-3 text-white font-semibold bg-blue-600 rounded-lg hover:bg-blue-700 transition"
+      >
+        BUY TICKET
+      </button>
+    </section>
+
+    <!-- about the event  -->
+    <section
+      id="about"
+      class="flex flex-col w-full h-auto relative px-12 py-24 md:p-24 gap-6 text-white overflow-hidden"
+    >
+      <p class="text-2xl text-purple-600">About The Event</p>
+      <h2 class="text-2xl md:text-4xl w-full md:max-w-3xl">
+        With a stunning lineup of headliners and immersive experiences, this is
+        the must attend event of the Advitya.
+      </h2>
+      <div
+        class="relative flex h-[50vh] md:h-screen w-full bg-[url(/public/aboutbg02.jpeg)] bg-cover"
+      >
+        <h3 class="relative text-white p-6 text-right text-xl md:text-3xl">
+          We aim to create a memorable experience that brings Cybersecurity
+          lovers from around the world together.
+        </h3>
+      </div>
+    </section>
+
+    <!-- tickets section  -->
+    <section
+      id="ticket"
+      class="flex flex-col w-full h-auto relative px-12 py-24 md:p-24 gap-6 text-white overflow-hidden"
+    >
+      <p class="text-2xl text-purple-600">Tickets</p>
+      <h2 class="text-2xl md:text-4xl w-full md:max-w-3xl">
+        Choose from a variety of tickets options organized by Wicys Events.
+      </h2>
+      <div class="flex flex-col md:flex-row mt-6 gap-6 relative">
+        <div
+          class="flex flex-col p-3 flex-grow rounded-md bg-[#130c25] shadow-[0_0_25px_black]"
+        >
+          <h3 class="font-bold text-xl">Audience Pass</h3>
+          <p>We are excited to have you as an audience with us.</p>
+          <hr class="my-6" />
+          <h4 class="font-bold text-4xl">Rs. 100</h4>
+          <button class="mt-4 px-6 py-2 bg-purple-600 text-white rounded-md">
+            Buy Ticket
+          </button>
+        </div>
+        <div
+          class="flex flex-col p-3 flex-grow rounded-md bg-[#130c25] shadow-[0_0_25px_black]"
+        >
+          <h3 class="font-bold text-xl">Participant Pass</h3>
+          <p>Having you play alongside other teams to make a mark.</p>
+          <hr class="my-6" />
+          <h4 class="font-bold text-4xl">Rs. 150</h4>
+          <button class="mt-4 px-6 py-2 bg-purple-600 text-white rounded-md">
+            Buy Ticket
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- gallery section  -->
+    <section
+      id="gallery"
+      class="bg-slate-950 flex flex-col w-full h-auto relative px-12 py-24 md:p-24 gap-6 overflow-hidden"
+    >
+      <p class="text-2xl text-purple-600">Past Event Gallery</p>
+      <h2 class="text-2xl md:text-4xl w-full md:max-w-3xl">
+        Experience the magic of past Events with our special photo gallery.
+      </h2>
+      <div class="columns-2 md:columns-3 gap-4 space-y-4">
+        <img
+          alt="gallery"
+          src="/public/gallery01.jpeg"
+          class="w-full rounded-lg shadow-lg"
+        />
+        <img
+          alt="gallery"
+          src="/public/gallery02.jpeg"
+          class="w-full rounded-lg shadow-lg"
+        />
+        <img
+          alt="gallery"
+          src="/public/gallery03.jpeg"
+          class="w-full rounded-lg shadow-lg"
+        />
+        <img
+          alt="gallery"
+          src="/public/gallery01.jpeg"
+          class="w-full rounded-lg shadow-lg"
+        />
+        <img
+          alt="gallery"
+          src="/public/gallery02.jpeg"
+          class="w-full rounded-lg shadow-lg"
+        />
+        <img
+          alt="gallery"
+          src="/public/gallery03.jpeg"
+          class="w-full rounded-lg shadow-lg"
+        />
+        <img
+          alt="gallery"
+          src="/public/gallery01.jpeg"
+          class="w-full rounded-lg shadow-lg"
+        />
+        <img
+          alt="gallery"
+          src="/public/gallery02.jpeg"
+          class="w-full rounded-lg shadow-lg"
+        />
+        <img
+          alt="gallery"
+          src="/public/gallery03.jpeg"
+          class="w-full rounded-lg shadow-lg"
+        />
+      </div>
+    </section>
+
+    <!-- contact section  -->
+    <section
+      id="contact"
+      class="flex flex-col w-full h-auto px-12 py-24 md:p-24 gap-6 overflow-hidden"
+    >
+      <p class="text-2xl text-purple-600">Contact Us</p>
+      <h2 class="text-2xl md:text-4xl w-full md:max-w-3xl">
+        Have questions? We're here to help.
+      </h2>
+      <span>Fill out the contact form below.</span>
+      <div class="flex flex-col md:flex-row gap-10">
+        <form
+          id="contactForm"
+          class="relative flex flex-col flex-grow gap-4 w-full md:max-w-[50vw]"
+        >
+          <div class="flex flex-col md:flex-row gap-4 w-full">
+            <input
+              type="text"
+              id="firstName"
+              name="firstName"
+              placeholder="First Name"
+              class="text-black flex-grow p-2 rounded bg-gray-200"
+              required
+            />
+            <input
+              type="text"
+              id="lastName"
+              name="lastName"
+              placeholder="Last Name"
+              class="text-black flex-grow p-2 rounded bg-gray-200"
+              required
+            />
+          </div>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email"
+            class="text-black w-full p-2 rounded bg-gray-200"
+            required
+          />
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Your Message"
+            class="text-black flex-grow p-2 rounded bg-gray-200"
+            required
+          ></textarea>
+          <button
+            type="submit"
+            class="bg-purple-600 text-white px-6 py-2 rounded hover:bg-purple-700"
+          >
+            Submit Now
+          </button>
+        </form>
+        <div
+          class="bg-[url('/public/contactbg.jpeg')] h-[50vh] w-full md:w-[50vw] bg-cover bg-no-repeat bg-center"
+        ></div>
+      </div>
+    </section>
+
+    <!-- footer section  -->
+    <footer
+      class="grid grid-cols-1 md:grid-cols-3 w-full px-12 py-24 md:p-24 bg-slate-950 border-t border-slate-800"
+    >
+      <div class="flex flex-col mb-12">
+        <h4 class="text-4xl font-bold">EVENT Name</h4>
+        <span class="text-sm font-light">Bring People Together</span>
+      </div>
+      <div
+        class="flex flex-col w-full mx-auto md:flex-grow items-start md:items-center mb-12"
+      >
+        <h4 class="text-xl font-bold mb-4">Quick Links</h4>
+        <ul class="flex flex-col md:flex-row gap-4">
+          <li>
+            <a href="#about" onclick="smoothScroll(event, 'about')">About</a>
+          </li>
+          <li>
+            <a href="#ticket" onclick="smoothScroll(event, 'ticket')"
+              >Register</a
+            >
+          </li>
+          <li>
+            <a href="#location" onclick="smoothScroll(event, 'location')"
+              >Location</a
+            >
+          </li>
+          <li>
+            <a href="#gallery" onclick="smoothScroll(event, 'gallery')"
+              >Gallery</a
+            >
+          </li>
+          <li>
+            <a href="#contact" onclick="smoothScroll(event, 'contact')"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="flex flex-col md:items-end items-start">
+        <h4 class="text-xl font-bold mb-4">Our Social Links</h4>
+        <div class="flex gap-4">
+          <a
+            href="https://www.facebook.com"
+            target="_blank"
+            class="text-xl text-blue-600"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a
+            href="https://www.instagram.com"
+            target="_blank"
+            class="text-xl text-pink-500"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a
+            href="https://www.youtube.com"
+            target="_blank"
+            class="text-xl text-red-600"
+            ><i class="fab fa-youtube"></i
+          ></a>
+          <a
+            href="https://www.twitter.com"
+            target="_blank"
+            class="text-xl text-blue-400"
+            ><i class="fab fa-twitter"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+
+    <button
+      class="relative w-fit px-5 py-3 my-5 rounded-full hover:bg-purple-900 hover:text-black duration-500 flex justify-center pl-14 hover:pl-5 hover:pr-14 group arrow-button"
+    >
+      <i
+        class="fas fa-arrow-up-right absolute left-[5px] top-[6px] bg-purple-900 duration-500 text-black rounded-full text-4xl p-1 arrow-icon"
+      ></i>
+      <span class="ml-4 text-white group-hover:text-black">Click Me</span>
+    </button>
+
+    <div class="main">
+      <div class="slider-container">
+        <div id="slider" class="slider">
+          <p id="firstText">Women in CyberSecurity</p>
+          <p id="secondText">Women in CyberSecurity</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const slider = document.getElementById("slider");
+        const firstText = document.getElementById("firstText");
+        const secondText = document.getElementById("secondText");
+
+        if (!slider || !firstText || !secondText) {
+          console.error("Parallax elements not found!");
+          return;
+        }
+
+        let xPosition = 0;
+        let direction = -1;
+        const speed = 2; // Increased speed for better effect
+
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Scroll Trigger Effect
+        ScrollTrigger.create({
+          trigger: document.documentElement,
+          scrub: 0.5,
+          start: "top top",
+          end: "bottom top",
+          onUpdate: (self) => {
+            direction = self.direction * -1;
+          },
+        });
+
+        // Parallax Animation
+        function animate() {
+          xPosition += speed * direction;
+
+          if (xPosition < -100) xPosition = 0;
+          if (xPosition > 0) xPosition = -100;
+
+          gsap.set(firstText, { x: `${xPosition}%` });
+          gsap.set(secondText, { x: `${xPosition}%` });
+
+          requestAnimationFrame(animate);
+        }
+
+        animate();
+      });
+    </script>
+
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll(".arrow-button").forEach((button) => {
+          button.addEventListener("mouseover", function () {
+            const arrow = this.querySelector(".arrow-icon");
+            arrow.classList.add("left-[75%]", "rotate-45");
+            arrow.classList.remove("left-[5px]");
+          });
+          button.addEventListener("mouseout", function () {
+            const arrow = this.querySelector(".arrow-icon");
+            arrow.classList.remove("left-[75%]", "rotate-45");
+            arrow.classList.add("left-[5px]");
+          });
+        });
+      });
+    </script>
+
+    <script>
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          const formData = {
+            firstName: document.getElementById("firstName").value,
+            lastName: document.getElementById("lastName").value,
+            email: document.getElementById("email").value,
+            message: document.getElementById("message").value,
+          };
+          console.log("Form Data Submitted:", formData);
+          alert("Form submitted successfully!");
+        });
+    </script>
+    <script>
+      function smoothScroll(event, targetId) {
+        event.preventDefault();
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        if ("scrollBehavior" in document.documentElement.style === false) {
+          import(
+            "https://cdnjs.cloudflare.com/ajax/libs/smoothscroll-polyfill/0.4.4/smoothscroll.min.js"
+          ).then(() => (window.__forceSmoothScrollPolyfill__ = true));
+        }
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll(".scroll-link").forEach((link) => {
+          link.addEventListener("click", function (event) {
+            event.preventDefault();
+            const targetId = this.getAttribute("href").substring(1);
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+              targetElement.scrollIntoView({ behavior: "smooth" });
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
