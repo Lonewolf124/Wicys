@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WiCyS VIT Bhopal - Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: url('/static/images/wicys6.png') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            position: relative;
+        }
+        .login-container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            width: 350px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            z-index: 2;
+        }
+        .login-container img {
+            width: 150px;
+            margin-bottom: 15px;
+        }
+        .login-container input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            font-size: 16px;
+        }
+        .login-container input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        .login-container button {
+            width: 100%;
+            padding: 12px;
+            background: #ff416c;
+            border: none;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .login-container button:hover {
+            background: #ff4b2b;
+        }
+        .login-container .google-btn {
+            margin-top: 15px;
+            background: #ff416c;
+            border: none;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
+            padding: 12px;
+            width: 100%;
+        }
+        .login-container .google-btn:hover {
+            background: #ff4b2b;
+        }
+        .login-container a {
+            display: block;
+            margin-top: 10px;
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .login-container a:hover {
+            text-decoration: underline;
+        }
+        .girl-image {
+            position: absolute;
+            right: 50px;
+            bottom: 0;
+            width: 300px;
+            height: auto;
+            z-index: 1;
+        }
+    
+        .girl-image {
+            position: absolute;
+            right: 0px;
+            bottom: 0;
+            width: 500px;
+            height: auto;
+            z-index: 1;
+        }
+        .wicys-sheild {
+            position: absolute;
+            left: 0px;
+            bottom: 200px;
+            width: 500px; 
+            height: auto;
+            z-index: 1;
+        }
+        
+
+        .text-banner {
+            color: white;
+            font-size: 40px;
+            font-weight: 600;
+            text-transform: uppercase;
+            text-align: left;
+            width: 300px;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <img src="/static/images/wicyslogo.png" alt="WiCyS Logo">
+        <!-- <h2>WiCyS VIT Bhopal Login</h2> -->
+        <form action="/login" method="POST">
+
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+        <button class="google-btn" onclick="redirectToGoogleLogin()">
+            Sign in with Google
+        </button>
+        <a href="{{ url_for('forgot_password') }}">Forgot Password?</a>
+        <a href="{{ url_for('register') }}">Register User</a>
+        
+    </div>
+    <img src="/static/images/woman.webp" alt="Girl Image"  width="500" height="1000" class="girl-image">
+    <img src="/static/images/wicys8.png" alt="wicys sheild"  width="500" height="1000" class="wicys-sheild">
+    <!-- <script>
+        document.getElementById("googleSignIn").addEventListener("click", function() {
+            alert("Google Sign-In clicked! Implement authentication here.");
+        });
+    </script> -->
+    <script>
+        function redirectToGoogleLogin() {
+            window.location.assign("{{ url_for('google_login') }}");
+        }
+    </script>
+</body>
+</html>

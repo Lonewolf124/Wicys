@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WiCyS VIT Bhopal - Register</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: url('/static/images/wicys6.png') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            position: relative;
+        }
+        .register-container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            width: 350px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            z-index: 2;
+        }
+        .register-container img {
+            width: 150px;
+            margin-bottom: 15px;
+        }
+        .register-container input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            font-size: 16px;
+        }
+        .register-container input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        .register-container button {
+            width: 100%;
+            padding: 12px;
+            background: #ff416c;
+            border: none;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .register-container button:hover {
+            background: #ff4b2b;
+        }
+        .register-container a {
+            display: block;
+            margin-top: 10px;
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .register-container a:hover {
+            text-decoration: underline;
+        }
+        .girl-image {
+            position: absolute;
+            right: 50px;
+            bottom: 0;
+            width: 300px;
+            height: auto;
+            z-index: 1;
+        }
+    
+        .girl-image {
+            position: absolute;
+            right: 0px;
+            bottom: 0;
+            width: 500px;
+            height: auto;
+            z-index: 1;
+        }
+        .wicys-sheild {
+            position: absolute;
+            left: 0px;
+            bottom: 200px;
+            width: 500px; 
+            height: auto;
+            z-index: 1;
+        }
+        
+        .text-banner {
+            color: white;
+            font-size: 40px;
+            font-weight: 600;
+            text-transform: uppercase;
+            text-align: left;
+            width: 300px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="register-container">
+        <img src="/static/images/wicyslogo.png" alt="WiCyS Logo">
+        <form action="/register" method="POST">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Register</button>
+        </form>
+        <a href="{{ url_for('login') }}">Already have an account? Login</a>
+    </div>
+    <img src="/static/images/woman.webp" alt="Girl Image"  width="500" height="1000" class="girl-image">
+    <img src="/static/images/wicys8.png" alt="wicys sheild"  width="500" height="1000" class="wicys-sheild">
+</body>
+</html>

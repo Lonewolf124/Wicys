@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leaderboard</title>
+    <link rel="stylesheet" href="leaderboard.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div
+      class="fixed w-[88vw] top-10 mx-auto py-5 flex flex-col gap-5 md:flex-row justify-around items-center z-50 bg-transparent"
+    >
+      <div class="flex relative">
+        <h1
+          class="text-3xl font-bold mix-blend-difference drop-shadow-xl text-white"
+        >
+          WICYS
+        </h1>
+      </div>
+      <div
+        class="flex px-8 py-4 justify-around bg-white bg-opacity-60 backdrop-blur-lg rounded-full text-slate-900 font-semibold text-sm w-full max-w-3xl"
+      >
+        <ul class="flex flex-wrap gap-6 justify-around w-full">
+          <li><a href="#hero" class="scroll-link">Home</a></li>
+          <li><a href="#about" class="scroll-link">About</a></li>
+          <li><a href="#ticket" class="scroll-link">Register</a></li>
+          <li><a href="#gallery" class="scroll-link">Gallery</a></li>
+          <li><a href="leaderboard.html">LeaderBoard</a></li>
+          <li><a href="#contact" class="scroll-link">Contact</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="leaderboard-container">
+      <div class="top-rankings">
+        <div class="rank-card second" id="second">
+          <img src="./assets/avatar2.png" alt="Shane Abellana" />
+          <h3>Shane Abellana</h3>
+          <p>Score: 1310</p>
+          <p>Rank #2</p>
+        </div>
+        <div class="rank-card first" id="first">
+          <img src="./assets/avatar1.png" alt="Gino Deedrick" />
+          <h3>Gino Deedrick</h3>
+          <p>Score: 1355</p>
+          <p>Rank #1</p>
+        </div>
+        <div class="rank-card third" id="third">
+          <img src="./assets/avatar3.png" alt="Robert Paweick" />
+          <h3>Robert Paweick</h3>
+          <p>Score: 1260</p>
+          <p>Rank #3</p>
+        </div>
+      </div>
+      <table class="leaderboard-table">
+        <thead>
+          <tr>
+            <th>Icon</th>
+            <th>Rank</th>
+            <th>Name</th>
+            <th>Username</th>
+            <th>Total Time</th>
+            <th>Challenges</th>
+            <th>Score</th>
+          </tr>
+        </thead>
+        <tbody id="leaderboard-body">
+          <tr>
+            <td><img src="./assets/avatar1.png" alt="Gino Deedrick" /></td>
+            <td>4</td>
+            <td>Xiomara Domka</td>
+            <td>@xiomara</td>
+            <td>16h 18m 53s</td>
+            <td>26</td>
+            <td>1230</td>
+          </tr>
+          <tr>
+            <td><img src="./assets/avatar1.png" alt="Gino Deedrick" /></td>
+            <td>5</td>
+            <td>Caroline Tillo</td>
+            <td>@caroline</td>
+            <td>19h 21m 5s</td>
+            <td>32</td>
+            <td>1190</td>
+          </tr>
+          <tr>
+            <td><img src="./assets/avatar1.png" alt="Gino Deedrick" /></td>
+            <td>6</td>
+            <td>Myron Battistini</td>
+            <td>@chanel</td>
+            <td>12h 30m 39s</td>
+            <td>24</td>
+            <td>1095</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const rows = document.querySelectorAll(".leaderboard-table tbody tr");
+        rows.forEach((row) => {
+          row.addEventListener("mouseover", () => {
+            row.style.backgroundColor = "rgba(255, 255, 255, 0.3)";
+          });
+          row.addEventListener("mouseout", () => {
+            row.style.backgroundColor = "";
+          });
+        });
+      });
+    </script>
+
+<div class="grid grid-cols-1 md:grid-cols-3 w-full px-12 py-24 md:p-24 bg-slate-950 border-t border-slate-800">
+    <div class="flex flex-col mb-12">
+        <h4 class="text-4xl font-bold">EVENT Name</h4>
+        <span class="text-sm font-light">Bring People Together</span>
+    </div>
+    <div class="flex flex-col w-full mx-auto md:flex-grow items-start md:items-center mb-12">
+        <h4 class="text-xl font-bold mb-4">Quick Links</h4>
+        <ul class="flex flex-col md:flex-row gap-4">
+            <li><a href="#about" onclick="smoothScroll(event, 'about')">About</a></li>
+            <li><a href="#ticket" onclick="smoothScroll(event, 'ticket')">Register</a></li>
+            <li><a href="#location" onclick="smoothScroll(event, 'location')">Location</a></li>
+            <li><a href="#gallery" onclick="smoothScroll(event, 'gallery')">Gallery</a></li>
+            <li><a href="#contact" onclick="smoothScroll(event, 'contact')">Contact</a></li>
+        </ul>
+    </div>
+    <div class="flex flex-col md:items-end items-start">
+        <h4 class="text-xl font-bold mb-4">Our Social Links</h4>
+        <div class="flex gap-4">
+            <a href="https://www.facebook.com" target="_blank" class="text-xl text-blue-600"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com" target="_blank" class="text-xl text-pink-500"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com" target="_blank" class="text-xl text-red-600"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.twitter.com" target="_blank" class="text-xl text-blue-400"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+</div>
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script>
+        function smoothScroll(event, targetId) {
+            event.preventDefault();
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            if ('scrollBehavior' in document.documentElement.style === false) {
+                import('https://cdnjs.cloudflare.com/ajax/libs/smoothscroll-polyfill/0.4.4/smoothscroll.min.js')
+                    .then(() => window.__forceSmoothScrollPolyfill__ = true);
+            }
+        });
+    </script>
+
+  </body>
+</html>
